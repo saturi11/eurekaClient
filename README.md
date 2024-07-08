@@ -27,9 +27,7 @@ Example `application.properties` configuration:
 ```properties
 eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
 
-
 API Endpoints
-The application exposes<vscode_annotation details='%5B%7B%22title%22%3A%22hardcoded-credentials%22%2C%22description%22%3A%22Embedding%20credentials%20in%20source%20code%20risks%20unauthorized%20access%22%7D%5D'> the</vscode_annotation> following endpoints:
 
 Create Customer
 
@@ -47,3 +45,5 @@ Get Customer
 
 GET /customers/{id}
 Retrieves a specific customer's details.
+Error Handling
+The application includes basic error handling for scenarios such as resource not found. It uses custom exceptions and ResponseEntityExceptionHandler to provide meaningful error messages to the client.

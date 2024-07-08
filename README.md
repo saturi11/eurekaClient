@@ -18,23 +18,39 @@ Before you can run this application, you need to have the following installed:
 2. Open a terminal and navigate to the project directory.
 3. Execute `mvn spring-boot:run` to start the application.
 
-API Endpoints
+## API Endpoints
 
-Create Customer
+### Create Customer
+**POST /customers**
+- Creates a new customer record.
 
-POST /customers
-Creates a new customer record.
-Update Customer
+### Update Customer
+**PUT /customers/{id}**
+- Updates an existing customer's details.
 
-PUT /customers/{id}
-Updates an existing customer's details.
-Delete Customer
+### Delete Customer
+**DELETE /customers/{id}**
+- Deletes a customer record.
 
-DELETE /customers/{id}
-Deletes a customer record.
-Get Customer
+### Get Customer
+**GET /customers/{id}**
+- Retrieves a specific customer's details.
 
-GET /customers/{id}
-Retrieves a specific customer's details.
-Error Handling
-The application includes basic error handling for scenarios such as resource not found. It uses custom exceptions and ResponseEntityExceptionHandler to provide meaningful error messages to the client.
+## Error Handling
+
+The application includes basic error handling for scenarios such as resource not found. It uses custom exceptions and `ResponseEntityExceptionHandler` to provide meaningful error messages to the client.
+
+## Related Projects
+
+This project is part of a larger system. Here are the links to other related projects with a brief explanation of each:
+
+1. **[Eureka Server](https://github.com/saturi11/eurekaserver)**
+   - This is the Eureka Server where all services register for service discovery.
+
+2. **[Eureka Delivery Service](https://github.com/saturi11/eurekaDelivery)**
+   - This service handles the delivery logistics and integrates with the Eureka server for service discovery.
+
+3. **[Order Eureka Client Service](https://github.com/saturi11/Order-Eureka-Client-Service)**
+   - This service manages orders and also registers with the Eureka server for service discovery and load balancing.
+
+Feel free to explore these repositories to understand the complete system architecture and how each service interacts with the Eureka server.

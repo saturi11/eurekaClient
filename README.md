@@ -18,15 +18,6 @@ Before you can run this application, you need to have the following installed:
 2. Open a terminal and navigate to the project directory.
 3. Execute `mvn spring-boot:run` to start the application.
 
-## Configuration
-
-To configure the application to register with a specific Eureka server, modify the `application.properties` or `application.yml` file in the `src/main/resources` directory with the URL of your Eureka server.
-
-Example `application.properties` configuration:
-
-```properties
-eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
-
 API Endpoints
 
 Create Customer
